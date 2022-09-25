@@ -105,7 +105,7 @@ textarea {
   padding: 10px 32px;
 }
 /* HEADER */
-.header-container {
+.header__container {
   display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -113,7 +113,7 @@ textarea {
   justify-content: center;
   border-bottom: 1px solid #ececec;
 }
-.logo-link {
+.logo__link {
   color: var(--primary-txt-cl);
   font-family: 'Raleway';
   font-weight: 700;
@@ -123,17 +123,17 @@ textarea {
   margin-right: 93px;
   display: inline;
 }
-.header-link {
+.nav__link {
   transition: color var(--time-hover-effect) cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-link:hover,
-.header-link:focus {
+.nav__link:hover,
+.nav__link:focus {
   color: var(--actionaly-txt-cl);
 }
-.logo-link-web {
+.logo__link-web {
   color: var(--actionaly-txt-cl);
 }
-.header-list {
+.nav__list {
   font-weight: 500;
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -141,32 +141,32 @@ textarea {
   display: flex;
   gap: 50px;
 }
-.header-item {
+.nav__item {
   display: block;
   color: var(--primary-txt-cl);
 }
 
-.header-list-cont {
+.header__list {
   display: flex;
   gap: 30px;
 }
-.header-conts {
+.header__conts {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.header-nav {
+.nav {
   margin-right: auto;
 }
 
-.header-active {
+.nav__link--active {
   position: relative;
   padding-bottom: 40px;
   color: var(--actionaly-txt-cl);
 }
 
-.header-active::after {
+.nav__link--active::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -177,7 +177,7 @@ textarea {
   background-color: var(--actionaly-txt-cl);
   border-radius: 2px;
 }
-.header-item-cont {
+.header__item {
   display: flex;
   gap: 10px;
   color: var(--secondary-txt-cl);
@@ -186,8 +186,8 @@ textarea {
     fill var(--time-hover-effect) cubic-bezier(0.4, 0, 0.2, 1),
     stroke var(--time-hover-effect) cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-item-cont:hover,
-.header-item-cont:focus {
+.header__item:hover,
+.header__item:focus {
   color: var(--actionaly-txt-cl);
   fill: var(--actionaly-txt-cl);
   stroke: var(--actionaly-txt-cl);
@@ -390,17 +390,17 @@ textarea {
   border-radius: 4px;
 }
 /* Specias */
-.features-title {
+.features__title {
   opacity: 0;
 }
 
-.features-list {
+.features__list {
   letter-spacing: 0.03em;
   display: flex;
   gap: 30px;
 }
 
-.features-svg {
+.features__svg {
   display: flex;
   gap: 30px;
   height: 120px;
@@ -412,23 +412,23 @@ textarea {
   margin-bottom: 30px;
 }
 
-.features-subtitle {
+.features__subtitle {
   font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-.features-text {
+.features__text {
   font-size: 14px;
   line-height: calc(24 / 14);
   color: var(--secondary-txt-cl);
 }
 /* What we doing (Works) */
-.section.work {
+.work {
   padding-top: 0;
 }
-.work-title {
+.work__title {
   font-weight: 700;
   font-size: 36px;
   line-height: calc(42 / 36);
@@ -436,15 +436,15 @@ textarea {
   letter-spacing: 0.03em;
   margin-bottom: 50px;
 }
-.work-container {
+.work__list {
   display: flex;
   gap: 30px;
 }
-.work-card-container {
+.work__card-container {
   position: relative;
   z-index: 1;
 }
-.work-card-text {
+.work__card-text {
   position: absolute;
   display: flex;
   align-items: center;
@@ -466,7 +466,7 @@ textarea {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.team-title {
+.team__title {
   font-weight: 700;
   font-size: 36px;
   line-height: calc(42 / 36);
@@ -474,20 +474,20 @@ textarea {
   letter-spacing: 0.03em;
   margin-bottom: 50px;
 }
-.team-container {
+.team__list {
   display: flex;
   gap: 30px;
 }
-.container-item {
+.team__item {
   background: var(--main-bg-cl);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.team-descp {
+.team__descp {
   padding: 30px 0px;
 }
-.team-subtitle {
+.team__subtitle {
   font-weight: 500;
   font-size: 16px;
   line-height: calc(19 / 16);
@@ -495,12 +495,12 @@ textarea {
   letter-spacing: 0.03em;
   margin-bottom: 10px;
 }
-.team-cotial-link {
+.team__socials {
   display: flex;
   gap: 10px;
   justify-content: center;
 }
-.team-link {
+.team__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -512,13 +512,13 @@ textarea {
   transition: background-color var(--time-hover-effect) cubic-bezier(0.4, 0, 0.2, 1),
     fill var(--time-hover-effect) cubic-bezier(0.4, 0, 0.2, 1);
 }
-.team-link:hover,
-.team-link:focus {
+.team__link:hover,
+.team__link:focus {
   fill: var(--white-txt-cl);
   background-color: var(--actionaly-txt-cl);
 }
 
-.team-text {
+.team__text {
   font-size: 16px;
   line-height: calc(19 / 16);
   text-align: center;
