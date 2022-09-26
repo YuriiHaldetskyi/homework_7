@@ -130,7 +130,7 @@ textarea {
 .nav__link:focus {
   color: var(--actionaly-txt-cl);
 }
-.logo__link-web {
+.logo__link--web {
   color: var(--actionaly-txt-cl);
 }
 .nav__list {
@@ -143,7 +143,6 @@ textarea {
 }
 .nav__item {
   display: block;
-  color: var(--primary-txt-cl);
 }
 
 .header__list {
@@ -208,7 +207,7 @@ textarea {
   align-items: center;
   background-position: center;
 }
-/* MOBAL */
+/* MODAL */
 .backdrop {
   position: fixed;
   top: 0;
@@ -221,7 +220,7 @@ textarea {
   transition: opacity var(--time-hover-effect) cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow var(--time-hover-effect) cubic-bezier(0.4, 0, 0.2, 1);
 }
-.backdrop.is-hidden {
+.backdrop__hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
@@ -368,7 +367,7 @@ textarea {
   text-decoration: underline;
 }
 /* END_MODAL */
-.hero-title {
+.hero__title {
   font-weight: 900;
   font-size: 44px;
   line-height: calc(60 / 44);
@@ -576,7 +575,7 @@ textarea {
   line-height: calc(24 / 14);
   padding: 60px 0;
 }
-.logo-footer {
+.logo__link--footer {
   display: block;
   color: var(--white-txt-cl);
   font-family: 'Raleway';

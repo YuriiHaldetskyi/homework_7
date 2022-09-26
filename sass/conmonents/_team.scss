@@ -1,0 +1,66 @@
+.team {
+  background: $secondaryBgCl;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.team__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+.team__list {
+  display: flex;
+  gap: 30px;
+}
+.team__item {
+  background: $mainBgCl;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.team__descp {
+  padding: 30px 0px;
+}
+.team__subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(19 / 16);
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 10px;
+}
+.team__socials {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.sotials__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: $mainBgCl;
+  fill: $iconLinkCl;
+  transition: background-color $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1),
+    fill $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: $whiteTxtCl;
+    background-color: $actionalyTxtCl;
+  }
+}
+
+.team__text {
+  font-size: 16px;
+  line-height: calc(19 / 16);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $secondaryTxtCl;
+  margin-bottom: 16px;
+}

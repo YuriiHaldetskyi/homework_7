@@ -1,0 +1,111 @@
+.portf {
+  background: $mainBgCl;
+  color: $primaryTxtCl;
+  letter-spacing: 0.03em;
+}
+/* Заховав заголовок (У index.html також) */
+.portf__title {
+  opacity: 0;
+}
+/* Кнопки + ховел і фокус  */
+.portf__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 34px;
+}
+.portf__button {
+  cursor: pointer;
+  font-family: inherit;
+  background: $secondaryBgCl;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(26 / 16);
+  text-align: center;
+  border-radius: 4px;
+  border: none;
+  padding: 6px 22px;
+  transition: fill $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1),
+    background-color $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1),
+    color $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $actionalyTxtCl;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.portf__gallary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.portf__card {
+  background: $whiteTxtCl;
+  width: 370px;
+  flex-basis: (1200 - (30 * 2) / 3);
+}
+
+.portf__link {
+  display: block;
+  transition: box-shadow $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+}
+.portf__img-container {
+  position: relative;
+  overflow: hidden;
+}
+.portf__card-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $portfCardsBgCl90;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opasity $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1),
+    transform $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1);
+
+  .portf__link:hover & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.portf__img--desc {
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: calc(28 / 18);
+  color: $whiteTxtCl;
+}
+
+/* h2 - під картинками */
+.portf__card--container {
+  padding: 20px 24px;
+  border-left: 1px solid;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+  border-color: $mainBrCl;
+}
+.portf__subtitle {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: calc(36 / 18);
+  letter-spacing: 0.06em;
+}
+/* Текст під h2 */
+.portf__text {
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  color: $secondaryTxtCl;
+}

@@ -1,0 +1,33 @@
+.header__container {
+  display: flex;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #ececec;
+}
+.header__list {
+  display: flex;
+  gap: 30px;
+}
+.header__conts {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.header__item {
+  display: flex;
+  gap: 10px;
+  color: $secondaryTxtCl;
+  fill: $secondaryTxtCl;
+  transition: color $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1),
+    fill $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1),
+    stroke $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $actionalyTxtCl;
+    fill: $actionalyTxtCl;
+    stroke: $actionalyTxtCl;
+  }
+}

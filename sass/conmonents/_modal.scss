@@ -1,0 +1,171 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: 2;
+  pointer-events: all;
+  background-color: $modalBackdropCl;
+  transition: opacity $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1);
+
+  &--hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+  }
+}
+
+.modal {
+  position: absolute;
+  padding: 40px;
+  min-width: 528px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: $mainBgCl;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.modal__title {
+  display: block;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.modal__label {
+  position: relative;
+  display: block;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: $secondaryTxtCl;
+  margin-bottom: 10px;
+
+  &--name {
+    display: inherit;
+    margin-bottom: 4px;
+  }
+}
+.modal__comment {
+  display: block;
+  padding: 12px 16px;
+  width: 100%;
+  height: 120px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  outline: transparent;
+  transition: border-color $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    border-color: $actionalyTxtCl;
+  }
+}
+
+.modal__input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  outline: transparent;
+  padding: 0 42px;
+  transition: border-color $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1),
+    fill $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    border-color: $actionalyTxtCl;
+  }
+
+  &:hover + .modal__icon,
+  &:focus + .modal__icon {
+    fill: $actionalyTxtCl;
+  }
+}
+
+.name-label:last-child {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.modal__name {
+  display: block;
+  margin-bottom: 4px;
+}
+.modal__icon {
+  position: absolute;
+  bottom: 10px;
+  left: 12px;
+  transition: fill $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal__checkbox {
+  position: relative;
+  display: block;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal__checkbox--icon {
+  display: block;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 4px;
+}
+.modal__checkbox--input {
+  opacity: 0;
+}
+.modal__form--icon-check {
+  opacity: 0;
+  transition: opacity $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal__form--icon-uncheck {
+  opacity: 1;
+  transition: opacity $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal__checkbox--input:checked + .modal__checkbox--icon .modal__form--icon-check {
+  opacity: 1;
+}
+.modal__checkbox--input:checked + .modal__checkbox--icon .modal__form--icon-uncheck {
+  opacity: 0;
+}
+.form__send-btn {
+  transition: background-color $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $activeBtnCl;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.close__btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  padding: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: transparent;
+  transition: fill $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    fill: $actionalyTxtCl;
+  }
+}
+
+.span-link {
+  color: #188ce8;
+  text-decoration: underline;
+}

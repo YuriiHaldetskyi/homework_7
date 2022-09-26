@@ -1,0 +1,39 @@
+.nav {
+  margin-right: auto;
+}
+.nav__link {
+  transition: color $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1);
+
+  &--active {
+    position: relative;
+    padding-bottom: 40px;
+    color: $actionalyTxtCl;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: $actionalyTxtCl;
+      border-radius: 2px;
+    }
+  }
+  &:hover,
+  &:focus {
+    color: $actionalyTxtCl;
+  }
+}
+
+.nav__list {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+  display: flex;
+  gap: 50px;
+}
+.nav__item {
+  display: block;
+}

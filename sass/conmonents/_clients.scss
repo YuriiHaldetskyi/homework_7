@@ -1,0 +1,44 @@
+.clients {
+  display: block;
+  margin: 0 auto;
+  padding-top: 102px;
+}
+.clietns__title {
+  line-height: calc(42 / 36);
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+  font-size: 36px;
+}
+.clients__list {
+  display: flex;
+  gap: 30px;
+
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.clients__item {
+  flex-basis: (1200 - (30 * 5) / 3);
+}
+
+.clients__link {
+  border: 1px solid $iconLinkCl;
+  border-radius: 4px;
+  height: 92px;
+  width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: $iconLinkCl;
+  transition: background-color $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1),
+    fill $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    fill: $actionalyTxtCl;
+    border-color: $actionalyTxtCl;
+  }
+}
+.clients-link:hover,
+.clients-link:focus {
+}

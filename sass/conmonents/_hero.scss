@@ -1,0 +1,35 @@
+.hero {
+  display: block;
+  margin: 0 auto;
+  background-image: linear-gradient(0deg, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero/backgaroud.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 1600px;
+  background-attachment: scroll;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  align-items: center;
+  background-position: center;
+}
+.hero__title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: calc(60 / 44);
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $whiteTxtCl;
+  margin: 0 auto 30px;
+  width: 696px;
+}
+.hero__btn {
+  transition: background-color $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: $activeBtnCl;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  }
+}

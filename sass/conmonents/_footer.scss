@@ -1,0 +1,128 @@
+.footer {
+  background: $actionalyBgCl;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: calc(24 / 14);
+  padding: 60px 0;
+}
+.footer__container {
+  display: flex;
+  gap: 70px;
+  align-items: baseline;
+}
+
+.footer__adress {
+  &--item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+
+  &--map {
+    width: 220px;
+    display: block;
+    font-style: normal;
+    color: $whiteTxtCl;
+    transition: color $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      color: $actionalyTxtCl;
+    }
+  }
+
+  &--link {
+    font-style: normal;
+    color: $grayTxtCl60;
+    transition: color $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      color: $actionalyTxtCl;
+    }
+  }
+}
+.footer__sec {
+  margin-left: 70px;
+
+  &--text {
+    text-transform: uppercase;
+    line-height: calc(16 / 14);
+    color: $mainBgCl;
+    margin-bottom: 20px;
+  }
+
+  &--sotials {
+    display: flex;
+    gap: 10px;
+  }
+
+  &--link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: $iconFootCl;
+    fill: $whiteTxtCl;
+    transition: fill $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1),
+      background-color $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      fill: $whiteTxtCl;
+      background-color: $actionalyTxtCl;
+    }
+  }
+}
+
+.footer__third {
+  margin-left: auto;
+}
+.footer__text {
+  color: $whiteTxtCl;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.footer__mail--input {
+  color: $whiteTxtCl;
+  width: 358px;
+  height: 50px;
+  background-color: $actionalyBgCl;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding-left: 16px;
+  outline: transparent;
+  transition: border-color $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    border-color: $actionalyTxtCl;
+  }
+}
+
+.footer__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  transition: background-color $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow $timeHoverEffect cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $activeBtnCl;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.footer__label-container {
+  display: flex;
+  gap: 12px;
+}
+.footer__mail--icon {
+  margin-left: 10px;
+}
