@@ -7,7 +7,6 @@
 }
 .footer__container {
   display: flex;
-  gap: 70px;
   align-items: baseline;
 }
 
@@ -77,6 +76,7 @@
   margin-left: auto;
 }
 .footer__text {
+  display: block;
   color: $whiteTxtCl;
   font-weight: 700;
   font-size: 14px;
